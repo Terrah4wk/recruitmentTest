@@ -1,0 +1,36 @@
+﻿Create a “live” web interface to display two sets of data consisting of a minimum of 2MB and 100x100 dimensions.  
+The data should be in binary format representing a format similar to P3 .PPM image format (each pixel is represented by 
+3 ASCII decimal values as opposed to .PPM where each pixel is represented by 1 ASCII decimal value).  
+Your format should contain 3 decimal values per pixel, but represented in the data as binary values.
+
+This data should be stored in a database table but only through the web interface you will create.  
+Store the data in the proper datatype within your database.
+
+The data should then be retrieved from the database, and displayed in two tables. One table will be the raw data – original.  
+The other table will be sorted by “rank” which will be determined by a binary numbering system, 
+where a row of data represents a binary counting system.  For example
+
+1001 1001 0001
+
+Although this represents only 1 pixel of one of your rows, you can understand the idea of the sorting using this example.  
+You will use the normal binary counting system, but to determine the value of each 4bit set, 
+however to determine the value of the entire row you will use a custom system –if the 4bit set > 8, 
+then consider it a “1” otherwise consider it “0”. Example:
+
+            1001 = 9 à 1
+
+            1001 = 9 à 1
+
+            0001 = 1 à 0
+
+Now if you represent these new “110” as a binary number you will get “6” in decimal, which is how you will sort the rows.
+
+Please code in any web language you are comfortable in. We use PHP along with MySQL.  
+Also, please make the system compatible with all browsers, 
+please add security as if you were protecting a database full of credit card information, 
+and please make it as speed oriented as you can.
+
+Please complete as much of the task as possible.  
+If you cannot complete 100% of the task, please submit what you have completed regardless – of course the more completed, 
+the more chance your skills will have to be seen.
+
